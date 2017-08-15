@@ -1,6 +1,6 @@
 (function(exports) {
-  function Note(text) {
-    this.text = text;
+  function Note(msg) {
+    this.text = msg;
   };
 
   Note.prototype.getText = function() {
