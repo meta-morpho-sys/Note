@@ -3,17 +3,17 @@
   // note list model object that can be instantiated.
   function NoteList() {
     // Stores an array of note models.
-    this.notes = [];
+    this._notes = [];
   }
 
   // Has a method that will return all the note models stored in the array.
   NoteList.prototype.getNotes = function() {
-    return this.notes;
+    return this._notes;
   };
 
   // Has a method that creates and stores a new single note model.
   NoteList.prototype.addNote = function(text) {
-    this.notes.push(new Note(text));
+    this._notes.push(new Note(text));
   }
 
   exports.NoteList = NoteList;

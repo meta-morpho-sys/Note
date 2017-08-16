@@ -20,4 +20,4 @@
 
   testEmptyArray();
   testNotesArray();
-})(this);
+})();
