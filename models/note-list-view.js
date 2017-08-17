@@ -16,8 +16,3 @@
 
   exports.NoteListView = NoteListView;
 })(this);
-
-
-
-// Handles a note list model that has no notes, one note or several notes.
-// NB: This challenge doesn't require you to display the HTML in a browser, or put the HTML into an HTML file. If your code returns the right string of HTML to your tests, the challenge is complete!

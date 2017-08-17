@@ -1,0 +1,29 @@
+@startuml
+class Note {
+  text
+  getText()
+}
+
+class NoteList {
+  getNotes()
+  addNote(text)
+  log()
+}
+
+class NoteListView {
+  NoteListView(noteList)
+  getNoteListHTML()
+}
+
+class NoteController {
+  NoteController(noteList)
+}
+
+NoteList "0" *-- "many" Note: notes
+
+NoteListView *-- NoteList: noteList
+
+NoteController .. NoteList
+
+NoteController .. NoteListView
+@enduml
