@@ -1,0 +1,42 @@
+@startuml
+class Note {
+  Stores text.
+  ==
+  text
+  getText()
+}
+
+class NoteList {
+  Stores multiple notes
+  and retrieves them.
+  ==
+  getNotes()
+  addNote(text)
+}
+
+class NoteListView {
+  Stores a note list and
+  renders it as an HTML string.
+  ==
+  NoteListView(noteList)
+  getNoteListHTML()
+}
+
+class NoteController {
+  Uses the NoteList \n and NoteListView to update\n the display view.
+  ==
+  NoteController(noteList)
+  render()
+}
+
+NoteList "0" *-- "many" Note: notes
+note right on link
+it is the property of NoteList.
+end note
+
+NoteListView *-- NoteList: noteList
+
+NoteController .. NoteList
+
+NoteController .. NoteListView
+@enduml
